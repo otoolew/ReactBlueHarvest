@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class App extends Component {
-  
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">         
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/Something.js</code> and save to reload.
-        </p>
+        <h1>{this.props.message}</h1>
       </div>
     );
   }
 }
+App.propTypes = {
+  message: PropTypes.string.isRequired,
+};
 
 export default App;
